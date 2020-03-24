@@ -14,12 +14,15 @@ class Person {
     }
 }
 
-const jun = new Person('Jun', 23);
-jun.incrementAge();
-jun.greeting();
+class Teacher extends Person {
+    constructor(name: string, age: number, public subject: string) {
+        super(name, age);
+    }
 
-const anotherJun = {
-    name: 'anotherJun',
-    anotherGreeting: jun.greeting
+    greeting() {
+        console.log(`Hello! My name is ${this.name}. I teach ${this.subject}`);
+    }
 }
-anotherJun.anotherGreeting();
+
+const teacher = new Teacher('Jun', 23, "Math");
+teacher.greeting();
