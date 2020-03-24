@@ -1,6 +1,6 @@
 class Person {
     readonly id: number = 32; // 初期化 最初
-    constructor(public readonly name: string, private age: number) {
+    constructor(public readonly name: string, protected age: number) {
         this.id = 31; // 初期化 最後
         this.name = "Akito";
     }
@@ -20,7 +20,7 @@ class Teacher extends Person {
     }
 
     greeting() {
-        console.log(`Hello! My name is ${this.name}. I teach ${this.subject}`);
+        console.log(`Hello! My name is ${this.name}. I am ${this.age}. I teach ${this.subject}`);
     }
 }
 
