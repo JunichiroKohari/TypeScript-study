@@ -1,7 +1,13 @@
 class Person {
     name: string;
-    constructor(initName: string) {
+    private age: number;
+    constructor(initName: string, initAge: number) {
         this.name = initName;
+        this.age = initAge;
+    }
+
+    incrementAge() {
+        this.age += 1;
     }
 
     greeting(this: { name: string }) {
@@ -9,7 +15,8 @@ class Person {
     }
 }
 
-const jun = new Person('Jun');
+const jun = new Person('Jun', 23);
+jun.incrementAge();
 jun.greeting();
 
 const anotherJun = {
