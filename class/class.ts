@@ -1,7 +1,8 @@
 class Person {
-    
-    constructor(public name: string, private age: number) {
-        
+    readonly id: number = 32; // 初期化 最初
+    constructor(public readonly name: string, private age: number) {
+        this.id = 31; // 初期化 最後
+        this.name = "Akito";
     }
 
     incrementAge() {
