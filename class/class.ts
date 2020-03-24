@@ -1,4 +1,9 @@
 class Person {
+    static species = 'Homo Sapiens';
+    static isAdult(age: number) {
+        if(age > 17) return true;
+        return false;
+    }
     readonly id: number = 32; // 初期化 最初
     constructor(public readonly name: string, protected age: number) {
         this.id = 31; // 初期化 最後
@@ -36,7 +41,7 @@ class Teacher extends Person {
     }
 }
 
-const teacher = new Teacher('Jun', 23, "Math");
-console.log(teacher.subject);
-teacher.subject = 'Music'
-teacher.greeting();
+console.log(Person.species);
+console.log(Person.isAdult(18));
+console.log(Teacher.species);
+console.log(Teacher.isAdult(18));
