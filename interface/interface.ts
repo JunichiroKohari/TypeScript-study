@@ -10,3 +10,12 @@ class Developer implements Human {
         console.log(message);
     }
 }
+
+const userA = {
+    name: 'Jun',
+    age: 23,
+    greeting(message: string) {
+        console.log(message);
+    }
+}
+const user: Human = userA;
