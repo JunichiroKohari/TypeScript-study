@@ -72,3 +72,6 @@ function havePet(pet: Pet) {
 }
 havePet(new Bird());
 
+// const input = <HTMLInputElement>document.getElementById('hoge');
+const input = document.getElementById('hoge') as HTMLInputElement;
+(document.getElementById('hoge') as HTMLInputElement).value = 'hoge';
