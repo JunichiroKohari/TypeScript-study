@@ -107,3 +107,4 @@ const downloadedData: DownloadedData = {
 console.log(downloadedData.user?.name?.first);
 
 const userData = downloadedData.user ?? 'no-user'; // nullish coalescing
+type id = DownloadedData['id' | 'user'];
