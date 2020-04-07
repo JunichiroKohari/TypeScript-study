@@ -30,8 +30,11 @@ function toUpperCase(x: string | number) {
     }
     return x;
 }
-
-const upperHello = toUpperCase('hello');
+interface Tmpfunc {
+    (x: string): number;
+    (x: number): number;
+}
+const upperHello: Tmpfunc = function (x: string | number) { return 0 };
 
 type NomadWorker = Engineer | Blogger;
 function describeProfile(nomadWorker : NomadWorker) {
@@ -108,3 +111,4 @@ console.log(downloadedData.user?.name?.first);
 
 const userData = downloadedData.user ?? 'no-user'; // nullish coalescing
 type id = DownloadedData['id' | 'user'];
+
